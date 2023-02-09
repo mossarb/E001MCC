@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script type="text/javascript" src="./script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.all.min.js"></script>
+    <title>SB-9000 Mobile Control Center | Bastek Technology</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-primary" style="color:#fff;">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#" style="color:#fff;">SB-9000 MCC</a>
+          <button class="navbar-toggler" type="button" style="color:#ffffff49; background: #ffffff40;" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#" style="color:#fff;">Ana Sayfa</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" style="color:#fff;" onclick="alert('Bu işlemi yapabilmek için giriş yapın.')">Robotu Konuştur</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" style="color:#fff;" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Özellikler
+                </a>
+                <ul class="dropdown-menu" style="background: #ffffff74;">
+                  <li><a class="dropdown-item" href="#" style="color:#3f3f3f;" onclick="alert('Bu işlemi yapabilmek için giriş yapın.')">Robotu Aç</a></li>
+                  <li><a class="dropdown-item" href="#" style="color:#3f3f3f;" onclick="alert('Bu işlemi yapabilmek için giriş yapın.')">Güvenlik Modunu Aç</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#" style="color:#3f3f3f;" onclick="alert('Bu işlemi yapabilmek için giriş yapın.')">Robotu Kapat</a></li>
+                  <li><a class="dropdown-item" href="#" style="color:#3f3f3f;" onclick="alert('Bu işlemi yapabilmek için giriş yapın.')">Güvenlik Modunu Kapat</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#" style="color:#3f3f3f;" onclick="alert('Bu işlemi yapabilmek için giriş yapın.')">Robotu Kilitle</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" style="color:#fff;" onclick="alert('Bu işlemi yapabilmek için giriş yapın.')">Robot Adını Değiştir</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="/komut" aria-label="Search">
+              <button class="btn btn-success" type="button" onclick="alert('Bu işlemi yapabilmek için giriş yapın.')">Gönder</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <br/>
+      <br/>
+      <div class="alert alert-danger" role="alert">
+        <h4 class="alert-heading">Sistem Aktif Değil!</h4>
+        <p>Sistemi aktif etmek için giriş yapın.</p>
+        <hr>
+        <p class="mb-0">Robot kullanıma hazır değil.</p>
+      </div>
+      <br/>
+      <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>Giriş yapın!</strong> Robotu yönetmek için sisteme giriş yapın.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+      <br/>
+      <hr>
+      <center>
+        <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">Sisteme giriş yap</button>
+      </center>
+      <hr>
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Sisteme Giriş Yap</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form name="loginForm">
+                <div class="mb-3">
+                  <label for="recipient-name" class="col-form-label">Yönetici ID:</label>
+                  <input type="text" class="form-control" id="recipient-name" value="">
+                </div>
+                <div class="mb-3">
+                  <label for="message-text" class="col-form-label">Açıklama Kodu:</label>
+                  <textarea class="form-control" id="message-text" value=""></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+                    <button type="button" class="btn btn-primary" id="submitButton" onclick="controlFunc()">Giriş yap</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+</body>
+</html>
